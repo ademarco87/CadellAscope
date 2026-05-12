@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,17 +26,9 @@ export default function Navbar() {
         scrolled ? "bg-navy shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between py-2">
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/logo.png"
-            alt="CadellAscope Enterprises"
-            width={320}
-            height={112}
-            className="h-28 w-auto object-contain"
-            priority
-          />
-        </Link>
+      <div className="relative w-full px-6 flex items-center justify-center py-2">
+
+        <span className="absolute left-6 text-white font-semibold text-sm tracking-wide">Success For Life Representative</span>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex items-center gap-8">
@@ -56,7 +46,7 @@ export default function Navbar() {
 
         <a
           href="#booking"
-          className="hidden md:inline-block bg-gold hover:bg-gold-dark text-navy font-semibold text-sm px-5 py-2.5 rounded-full transition-colors"
+          className="hidden md:inline-block absolute right-6 bg-gold hover:bg-gold-dark text-navy font-semibold text-sm px-5 py-2.5 rounded-full transition-colors"
         >
           Book a Session
         </a>

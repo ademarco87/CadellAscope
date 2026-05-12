@@ -12,9 +12,9 @@ export default function Footer() {
             <Image
               src="/logo.png"
               alt="CadellAscope Enterprises"
-              width={160}
-              height={56}
-              className="h-14 w-auto object-contain mb-4"
+              width={120}
+              height={42}
+              className="h-10 w-auto object-contain mb-4"
             />
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Helping individuals build stronger financial profiles — one
