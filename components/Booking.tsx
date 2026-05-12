@@ -24,9 +24,9 @@ export default function Booking() {
         {/* Calendly inline widget */}
         <div className="rounded-2xl overflow-hidden border-4 border-gold">
           <div
-            className="calendly-inline-widget w-full"
+            className="calendly-inline-widget w-full h-[419px] md:h-[700px]"
             data-url={CALENDLY_URL}
-            style={{ minWidth: "320px", height: "419px" }}
+            style={{ minWidth: "320px" }}
           />
         </div>
 
