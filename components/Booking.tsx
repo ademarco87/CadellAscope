@@ -1,11 +1,23 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Script from "next/script";
 
-// Replace this with the actual Calendly URL (e.g. https://calendly.com/cadellascope/discovery)
 const CALENDLY_URL = "https://calendly.com/representative-cadell?timezone=America/Los_Angeles&background_color=c2c2c2&text_color=0d1b3e&primary_color=c9a84c";
 
 export default function Booking() {
+  const [height, setHeight] = useState(700);
+
+  useEffect(() => {
+    const handleMessage = (e: MessageEvent) => {
+      if (e.data?.event === "calendly.page_height") {
+        setHeight(e.data.payload.height);
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, []);
+
   return (
     <section id="booking" className="bg-navy py-24">
       <div className="max-w-6xl mx-auto px-6">
@@ -22,12 +34,12 @@ export default function Booking() {
           </p>
         </div>
 
-        {/* Calendly inline widget */}
+        {/* Calendly inline widget — height auto-synced via postMessage */}
         <div className="rounded-2xl overflow-hidden border-4 border-gold">
           <div
             className="calendly-inline-widget w-full"
             data-url={CALENDLY_URL}
-            style={{ minWidth: "320px", height: "700px" }}
+            style={{ minWidth: "320px", height: `${height}px` }}
           />
         </div>
 
