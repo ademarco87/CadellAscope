@@ -23,11 +23,13 @@ export default function Booking() {
         </div>
 
         {/* Calendly inline widget */}
-        <div
-          className="calendly-inline-widget rounded-2xl overflow-hidden border-4 border-gold"
-          data-url={CALENDLY_URL}
-          style={{ minWidth: "320px", height: "700px" }}
-        />
+        <div className="w-full h-[1050px] md:h-[700px] rounded-2xl overflow-hidden border-4 border-gold">
+          <div
+            className="calendly-inline-widget w-full h-full"
+            data-url={CALENDLY_URL}
+            style={{ minWidth: "320px" }}
+          />
+        </div>
 
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
