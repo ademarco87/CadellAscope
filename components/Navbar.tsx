@@ -16,7 +16,7 @@ export default function Navbar() {
     { label: "About", href: "#about" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Coaching", href: "#coaching" },
-    { label: "Testimonials", href: "#testimonials" },
+    ///{ label: "Testimonials", href: "#testimonials" },
     { label: "FAQ", href: "#faq" },
   ];
 
