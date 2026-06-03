@@ -8,7 +8,7 @@ Professional website for CadellAscope Enterprises — financial coaching by Nico
 - **Styling:** Tailwind CSS v4
 - **Booking:** Calendly inline embed
 - **Deployment:** Fly.io
-- **Domain:** cadellascope.com
+- **Domain:** callwiths4lrep.com
 
 ## Sections
 
