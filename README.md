@@ -1,5 +1,7 @@
 # CadellAscope Enterprises
 
+> **Status: retired.** Built for a family member's coaching business and deployed to Fly.io through the GitHub Actions workflow in `.github/workflows/deploy.yml`. The site is no longer live; the repo is kept as a reference for the build, containerization, and deployment pipeline.
+
 Professional website for CadellAscope Enterprises — financial coaching by Nicole Cadell.
 
 ## Stack
